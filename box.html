@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Box Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .number {
+        pointer-events: none;
+        font-size: 100px;
+        font-family: "Poppins", sans-serif;
+        transform: translateY(100%);
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .boxes {
+        position: relative;
+        height: 225px;
+        width: 225px;
+        display: grid;
+        place-items: center;
+      }
+
+      #green {
+        background-color: #289790;
+      }
+
+      #skyblue {
+        background-color: #51a5ca;
+      }
+
+      #purpy {
+        background-color: #8f4cc0;
+      }
+
+      #gold {
+        background-color: #d8990b;
+      }
+
+      #red {
+        background-color: #cd3313;
+      }
+
+      .iTwo,
+      .iThree,
+      .iFour,
+      .iFive,
+      .iSix {
+        transition: 500ms;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.14);
+      }
+
+      .iTwo {
+        height: 185px;
+        width: 185px;
+      }
+      .iThree {
+        height: 150px;
+        width: 150px;
+      }
+      .iFour {
+        height: 115px;
+        width: 115px;
+      }
+      .iFive {
+        height: 85px;
+        width: 85px;
+      }
+      .iSix {
+        height: 55px;
+        width: 55px;
+      }
+
+      .boxes {
+        transition: 500ms;
+      }
+
+      .boxes:hover .iTwo {
+        transition-delay: 1s;
+        cursor: pointer;
+        opacity: 0;
+      }
+      .boxes:hover .iThree {
+        transition-delay: 0.755s;
+        cursor: pointer;
+        opacity: 0;
+      }
+      .boxes:hover .iFour {
+        transition-delay: 0.5s;
+        cursor: pointer;
+        opacity: 0;
+      }
+      .boxes:hover .iFive {
+        transition-delay: 0.25s;
+        cursor: pointer;
+        opacity: 0;
+      }
+      .boxes:hover .iSix {
+        cursor: pointer;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="boxes" id="green">
+        <h3 class="number">01</h3>
+        <div class="iTwo"></div>
+      </div>
+
+      <div class="boxes" id="skyblue">
+        <h3 class="number">02</h3>
+        <div class="iTwo"></div>
+        <div class="iThree"></div>
+      </div>
+
+      <div class="boxes" id="purpy">
+        <h3 class="number">03</h3>
+        <div class="iTwo"></div>
+        <div class="iThree"></div>
+        <div class="iFour"></div>
+      </div>
+
+      <div class="boxes" id="gold">
+        <h3 class="number">04</h3>
+        <div class="iTwo"></div>
+        <div class="iThree"></div>
+        <div class="iFour"></div>
+        <div class="iFive"></div>
+      </div>
+
+      <div class="boxes" id="red">
+        <h3 class="number">05</h3>
+        <div class="iTwo"></div>
+        <div class="iThree"></div>
+        <div class="iFour"></div>
+        <div class="iFive"></div>
+        <div class="iSix"></div>
+      </div>
+    </div>
+  </body>
+</html>
